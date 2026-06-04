@@ -12,7 +12,7 @@ qiwi_api_test_task_pytest/
 │   └── qiwi-wallet-local.postman_environment.json
 ├── tests/
 │   └── test_qiwi_api.py
-├── .env.example
+├── .env
 ├── .gitignore
 ├── README.md
 └── requirements.txt
