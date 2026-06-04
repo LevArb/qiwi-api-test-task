@@ -1,8 +1,8 @@
 {
   "info": {
     "_postman_id": "7d9ebc7b-3112-4f05-8a3d-e7a23cda627f",
-    "name": "QIWI Wallet API Test Task",
-    "description": "Postman collection for QIWI Wallet API test task. The service may be unavailable or may require a valid token; checks are designed according to API documentation.",
+    "name": "QIWI Wallet API Тест",
+    "description": "Коллекция Postman для тестового задания QIWI Wallet API. Проверки разработаны в соответствии с документацией.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "auth": {
@@ -29,10 +29,10 @@
   ],
   "item": [
     {
-      "name": "01 Service availability",
+      "name": "Доступность сервиса",
       "item": [
         {
-          "name": "TC-001 Get payment history - response contract",
+          "name": "Получение истории платежей",
           "request": {
             "method": "GET",
             "header": [
@@ -66,7 +66,7 @@
                 }
               ]
             },
-            "description": "Checks service availability by validating the documented payment history response contract."
+            "description": "Проверяет доступность услуги путем подтверждения наличия задокументированной истории платежей."
           },
           "event": [
             {
@@ -96,10 +96,10 @@
       ]
     },
     {
-      "name": "02 Balance",
+      "name": "Баланс",
       "item": [
         {
-          "name": "TC-002 Get balance - amount should be greater than 0",
+          "name": "Получить баланс - сумма на балансе должна быть больше 0",
           "request": {
             "method": "GET",
             "header": [
@@ -127,7 +127,7 @@
                 "accounts"
               ]
             },
-            "description": "Checks that RUB wallet balance exists and balance.amount > 0."
+            "description": "Проверяет наличие баланса в кошельке и значение balance.amount > 0."
           },
           "event": [
             {
@@ -166,10 +166,10 @@
       ]
     },
     {
-      "name": "03 Payment creation",
+      "name": "Создание платежа",
       "item": [
         {
-          "name": "TC-003 Create payment for 1 RUB",
+          "name": "Создать платеж на 1 руб.",
           "event": [
             {
               "listen": "prerequest",
@@ -252,16 +252,16 @@
                 "payments"
               ]
             },
-            "description": "Creates a QIWI wallet payment for 1 RUB. The generated paymentId is saved to environment before request."
+            "description": "Создает платеж в кошельке QIWI на сумму 1 руб. Сгенерированный paymentId сохраняется в окружении перед отправкой запроса."
           }
         }
       ]
     },
     {
-      "name": "04 Payment execution",
+      "name": "Сохраниние платежа",
       "item": [
         {
-          "name": "TC-004 Check created payment in payment history",
+          "name": "Проверка сохранения платежа в истории",
           "request": {
             "method": "GET",
             "header": [
@@ -299,7 +299,7 @@
                 }
               ]
             },
-            "description": "Checks execution result by searching created payment in outgoing payment history."
+            "description": "Проверяет результат выполнения, осуществляя поиск созданного платежа в истории исходящих платежей."
           },
           "event": [
             {
